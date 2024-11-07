@@ -18,7 +18,7 @@ namespace Aufgabe_12
             string input = Console.ReadLine();
             string[] input2 = input.Split(',');
             int[] zahl = new int[input2.Length];
-            int[] ergebnis = new int[input2.Length];
+            int[] ergebnis = new int[input2.Length];    //test
             int sum = 0;
 
             SumUp(zahl, input2);
