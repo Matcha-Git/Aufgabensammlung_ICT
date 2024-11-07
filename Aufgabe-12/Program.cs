@@ -18,12 +18,17 @@ namespace Aufgabe_12
             string input = Console.ReadLine();
             string[] input2 = input.Split(',');
             int[] zahl = new int[input2.Length];
-            int[] ergebnis = new int[input2.Length];    //test
+            int[] ergebnis = new int[input2.Length];
             int sum = 0;
 
+            for (int i = 0; i < input2.Length; i++)
+            {
+                zahl[i] = int.Parse(input2[i]);
+            }
+
+            Console.WriteLine("\nResultat:");
             SumUp(zahl, input2);
-            
-            Console.WriteLine(string.Join(", " + ergebnis));
+
             Console.ReadKey();
         }
         static int[] SumUp(int[] zahl, string[] input2)
@@ -34,6 +39,14 @@ namespace Aufgabe_12
             {
                 sum += zahl[i];
                 ergebnis[i] = sum;
+                if (i + 1 < input2.Length)
+                {
+                    Console.Write($"[{i}] -> {ergebnis[i]}, ");
+                }
+                else
+                {
+                    Console.Write($"[{i}] -> {ergebnis[i]}");
+                }
             }
             return ergebnis;
         }
