@@ -11,7 +11,6 @@ namespace Aufgabe_13
     {
         static void Main(string[] args)
         {
-            int i2 = 0;
 
             Console.WriteLine("Wie lang soll die Linie sein?");
             Console.Write("Deine Eingabe: ");
@@ -21,7 +20,7 @@ namespace Aufgabe_13
 
             for (int i = 0; i < input; i++)
             {
-                for (i2 = 0;i2 < input; i2++)
+                for (int i2 = 0;i2 < input; i2++)
                 {
                     if (i == i2)
                     {
