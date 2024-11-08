@@ -18,21 +18,22 @@ namespace Aufgabe_13
             uint input = Convert.ToUInt32(Console.ReadLine());
             Console.WriteLine(" ");
 
-            string[,] linie = new string[input,input];
 
             for (int i = 0; i < input; i++)
             {
-                if (i == i2)
+                for (i2 = 0;i2 < input; i2++)
                 {
-                    linie[i, i2] = "*";
-                    i2++;
+                    if (i == i2)
+                    {
+                        Console.Write(" ");
+                    }
+                    else
+                    {
+                        Console.Write("*");
+                    }
                 }
-                else
-                {
-                    linie[i, i2] = " ";
-                }
+                Console.Write("\n");
             }
-            Console.WriteLine(linie);
             Console.ReadKey();
 
         }
